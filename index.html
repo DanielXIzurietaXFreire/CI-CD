@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showImage(character) {
+            const images = {
+                light: 'images/light.jpg',
+                l: 'images/l.jpg',
+                ryuk: 'images/ryuk.jpg',
+                misa: 'images/misa.jpg'
+            };
+            const imageContainer = document.getElementById('character-image');
+            imageContainer.innerHTML = `
+                <div class="card">
+                    <img src="${images[character]}" alt="${character}" class="card-image">
+                    <div class="card-content">
+                        <h3>${character.charAt(0).toUpperCase() + character.slice(1)}</h3>
+                    </div>
+                </div>`;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        #character-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            display: inline-block;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Death Note</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showImage('light')">Light Yagami</a>
+        <a href="#" onclick="showImage('l')">L</a>
+        <a href="#" onclick="showImage('ryuk')">Ryuk</a>
+        <a href="#" onclick="showImage('misa')">Misa Amane</a>
+    </nav>
+
+    <div class="container">
+        <div id="character-image">
+            <p>Selecciona un personaje para ver su imagen.</p>
+        </div>
+
+        <section id="light" class="character">
+            <h2>Light Yagami</h2>
+            <p>Light Yagami es un estudiante brillante que encuentra la Death Note, un cuaderno con el poder de matar a cualquiera cuyo nombre sea escrito en él. Adoptando el alias de Kira, busca crear un mundo "perfecto" sin criminales.</p>
+        </section>
+
+        <section id="l" class="character">
+            <h2>L</h2>
+            <p>L es un detective excéntrico y brillante que intenta detener a Kira. Conocido por su peculiar postura y amor por los dulces, L es uno de los personajes más icónicos de la serie.</p>
+        </section>
+
+        <section id="ryuk" class="character">
+            <h2>Ryuk</h2>
+            <p>Ryuk es un Shinigami (dios de la muerte) que deja caer la Death Note en el mundo humano por aburrimiento. Aunque no toma partido, observa a Light y encuentra entretenimiento en sus acciones.</p>
+        </section>
+
+        <section id="misa" class="character">
+            <h2>Misa Amane</h2>
+            <p>Misa es una idol japonesa y seguidora de Kira. También posee una Death Note y está profundamente enamorada de Light, lo que la lleva a participar en sus planes.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Death Note Fanpage. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
